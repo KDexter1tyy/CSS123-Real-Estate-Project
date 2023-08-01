@@ -1,0 +1,136 @@
+
+  Lot Class      
+
+-id: int             
+-size: int           
+-location: int         
+-price: double       
+-status: String      
+-----------------------
++Lot(int, int, int, double, String)
++getId(): int         
++getSize(): int       
++getLocation(): int   
++getPrice(): double   
++getStatus(): String  
++setStatus(String): void          
+
+
+  Buyer Class      
+
+- id: int             
+- name: String           
+- phone: String         
+- lotsReserved: List<Lot>
+- lotsPurchased: List<Lot>      
+-----------------------
++ Buyer(int, String, String)
++ getId(): int         
++ getName(): String       
++ getPhone(): String   
++ getLotsReserved(): List<Lot>   
++ getLotsPurchased(): List<Lot>  
++ setId(int): void
++ setName(String): void
++ setPhone(String): void
++ setLotsReserved(List<Lot>): void
++ setLotsPurchased(List<Lot>): void
+
+
+
+
+ Seller Class      
+
+- id: int             
+- name: String           
+- phone: String         
+-----------------------
++ Seller(int, String, String)
++ getId(): int         
++ getName(): String       
++ getPhone(): String   
++ setId(int): void
++ setName(String): void
++ setPhone(String): void
+
+
+
+
+  MSystem Class      
+
+- instance: MSystem           
+- lots: List<Lot>           
+- buyers: List<Buyer>         
+- sellers: List<Seller>        
+-----------------------
++ MSystem()
++ getInstance(): MSystem
++ getLots(): List<Lot>
++ setLots(List<Lot>): void
++ getBuyers(): List<Buyer>
++ setBuyers(List<Buyer>): void
++ getSellers(): List<Seller>
++ setSellers(List<Seller>): void
++ searchLots(int, int): List<Lot>
++ sellLot(Lot, Buyer): void
++ generateReport(): void
++ saveLotsToFile(): void
+- addPreloadedLots(): void
+
+
+
+
+  Main Class      
+
+- scanner: Scanner           
+- lotHandler: LotAction          
+-----------------------
++ main(String[]): void
++ displayMenu(): void
++ handleLotSelling(Scanner, MSystem): void
++ handleFileReport(Scanner, MSystem): void
+
+
+
+
+  Person Class      
+
+- id: int
+- name: String
+- email: String
+- phone: String
+-----------------------
++ Person(int, String, String, String)
++ getId(): int
++ setId(int): void
++ getName(): String
++ setName(String): void
++ getEmail(): String
++ setEmail(String): void
++ getPhone(): String
++ setPhone(String): void
++ abstract displayInformation(): void
+
+
+
+
+
+ LotAction Class      
+
+- mSystem: MSystem
+- scanner: Scanner
+-----------------------
++ LotAction(MSystem, Scanner)
++ handleLotSearchAndBuy(): void
++ handleLotSearch(): void
++ displayAllLots(): void
++ handleLotBuying(): void
+
+
+
+
+
+
+  FileReport Interface      
+
++ generateReport(): void

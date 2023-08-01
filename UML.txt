@@ -1,0 +1,154 @@
+Lot Class
+==================
+- int: id
+- int: size
+- int: block
+- int: num
+- int: price
+- String: status
+------------------
++Lot(int, int, int, int, int, String)
++Lot()
++getters and setters
+
+
+User Class 
+==================
+- int: userid
+- String: username
+- String: password
+- lot: Lot
+------------------
++User()
++getters and setters
+
+
+Close Class (Interface referenced in MainMenu and UserInterface Class)
+------------------
++ public void close()
+
+
+DBComponents Class (Singleton Pattern) 
+//Connection, Statement, ResultSet & 
+//PreparedStatement Objects are from java.sql.* Package
+==================
+-<<static>> DBComponents: instance
+- con: Connection
+- nyStmt: Statement
+- rs: ResultSet
+- pst: PreparedStatement
+------------------
+- DBComponents()
++<<static>> getInstance(): DBComponents
+
+
+Decision Class (Interface of Decision Strategy Pattern)
+//JTable is an object from JFrame imported 
+//using import javax.swing.JTable;
+==================
++ ReserveLot(DBComponents , User , JTable): void
++ showTable(DBComponents db, User user, JTable): void
++ resetTable(JTable): void
+
+
+DecisionAbstract Class (implements Decision Interface)
+//# means protected
+==================
+#comboBoxLotSize:int
+#comboBoxLotPrice:int
+------------------
++ abstract ReserveLot (DBComponents , User , JTable): void
++ abstract showTable(DBComponents db, User user, JTable): void
++ resetTable(JTable): void
+
+
+DecisionNoStrategy Class (extends DecisionAbstract, Strategy of the Decision Class:Strategy Pattern)
+//This is used when user opts for
+//no preference in the search of lots
+==================
++ ReserveLot(DBComponents , User , JTable): void
++ showTable(DBComponents db, User user, JTable): void
+
+
+DecisionYesStrategy Class (extends DecisionAbstract, Strategy of the Decision Class:Strategy Pattern)
+//This is used when user opts for
+//no preference in the search of lots
+==================
++ ReserveLot(DBComponents , User , JTable): void
++ showTable(DBComponents db, User user, JTable): void
+
+
+ShowBoughtLotSubClass (extends DecisionNoStrategy)
+//This is another form of Strategy Pattern that 
+//is under the DecisionNoStrategy Class
+==================
++ showTable(DBComponents db, User user, JTable): void
+
+
+ShowReservedLotSubClass(extends DecisionNoStrategy)
+//This is another form of Strategy Pattern that 
+//is under the DecisionNoStrategy Class
+==================
++ showTable(DBComponents db, User user, JTable): void
+
+
+UserAction Interface (Login and Register using Strategy Pattern)
+==================
++ UserActionNow(DBComponents, String , String , User ): void
+
+
+UserActionLoginStrategy(implements UserAction Interface)
+//Login Function
+==================
++ UserActionNow(DBComponents, String , String , User ): void
+
+
+UserActionRegisterStrategy(implements UserAction Interface)
+//Register Function
+==================
++ UserActionNow(DBComponents, String , String , User): void
+- isUsernameExists(DBComponents, String): boolean
+
+UserLotAction Interface(Buy and Sell)
+//JTable is an object from JFrame imported 
+//using import javax.swing.JTable
+==================
++ void LotAction(DBComponents, User, JTable)
++ void resetTable(JTable)
+
+
+UserLotActionBuyStrategy(implements UserLotAction)
+//Buys Reserved Lots
+==================
+- bought: DecisionNoStrategy
+------------------
++ void LotAction(DBComponents , User , JTable)
+
+
+UserLotActionSellStrategy(implements UserLotAction)
+//Sells Owned Lot
+==================
+- reserved: DecisionNoStrategy
+------------------
++ void LotAction(DBComponents , User , JTable)
+
+
+
+MainMenu JFrame (JFrame of the Main Menu, implements Close)
+//JPanel and JLayeredPane objects are imported using javax.swing.* package
+==================
+- NoPrefer: DecisionNoStrategy 
+- bought: DecisionNoStrategy
+- reserved: DecisionNoStrategy
+- YesPrefer: DecisionYesStrategy
++ login: UserAction
++ register: UserAction
+------------------
++ MainMenu(User); constructor
++ close(): void
++ switchPanels(JPanel, JLayeredPanel): void
+
+
+
+
+

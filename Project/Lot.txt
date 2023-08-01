@@ -1,0 +1,18 @@
+ID: 1
+Lot: 50 sq. meters
+Location: Block 1
+Price: $250000.0
+Status: Available
+
+ID: 2
+Lot: 100 sq. meters
+Location: Block 2
+Price: $350000.0
+Status: Available
+
+ID: 3
+Lot: 150 sq. meters
+Location: Block 5
+Price: $450000.0
+Status: Available
+
