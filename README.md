@@ -2,11 +2,7 @@
 Real Estate System Project
 For the Completion of the subject CSS123: Object-Oriented Programming
 
-Developed by:
-- Panganiban
-- Laqueo
-- Mallari
-- Calpo
+Developed by a group of 4 people
 
 A Real Estate System that prompts the user to:
 1. View Reserved/Bought Lots
