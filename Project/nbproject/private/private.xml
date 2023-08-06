@@ -3,11 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Kyle/Desktop/CSS123-Java%20Projects/Project/Project/src/OtherComponents/MainMenu.java</file>
-            <file>file:/C:/Users/Kyle/Desktop/CSS123-Java%20Projects/Project/Project/src/OtherComponents/UserInterface.java</file>
-            <file>file:/C:/Users/Kyle/Desktop/CSS123-Java%20Projects/Project/Project/src/OtherComponents/Close.java</file>
-            <file>file:/C:/Users/Kyle/Desktop/CSS123-Java%20Projects/Project/Project/src/OtherComponents/Lot.java</file>
-            <file>file:/C:/Users/Kyle/Desktop/CSS123-Java%20Projects/Project/Project/src/OtherComponents/DBComponents.java</file>
+            <file>file:/C:/Users/Kyle/Desktop/CSS123-Java%20Projects/Project/Project/src/JFrameComponents/SearchLotsPreferYes.java</file>
+            <file>file:/C:/Users/Kyle/Desktop/CSS123-Java%20Projects/Project/Project/src/JFrameComponents/SearchLotsPrefer.java</file>
+            <file>file:/C:/Users/Kyle/Desktop/CSS123-Java%20Projects/Project/Project/src/JFrameComponents/RealEstateSystem.java</file>
+            <file>file:/C:/Users/Kyle/Desktop/CSS123-Java%20Projects/Project/Project/src/JFrameComponents/MainMenu.java</file>
+            <file>file:/C:/Users/Kyle/Desktop/CSS123-Java%20Projects/Project/Project/src/JFrameComponents/sellLot.java</file>
+            <file>file:/C:/Users/Kyle/Desktop/CSS123-Java%20Projects/Project/Project/src/DBComponents/DBComponents.java</file>
+            <file>file:/C:/Users/Kyle/Desktop/CSS123-Java%20Projects/Project/Project/src/JFrameComponents/SearchLotsPreferNo.java</file>
+            <file>file:/C:/Users/Kyle/Desktop/CSS123-Java%20Projects/Project/Project/src/JFrameComponents/ExitFrame.java</file>
         </group>
     </open-files>
 </project-private>
